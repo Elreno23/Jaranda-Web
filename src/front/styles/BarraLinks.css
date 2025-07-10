@@ -1,0 +1,81 @@
+.dropdown-toggle:focus {
+  border: none;
+}
+.btn-group {
+  position: relative;
+}
+.btn-group .dropdown-menu {
+  position: absolute;
+  top: 105%; /* Justo debajo del botón */
+  border-radius: 0px;
+  border: none;
+  min-width: 0px;
+  width: 100px;
+}
+.dropdown-menu .dropdown-item {
+  padding-left: 10px;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-group:hover .dropdown-menu {
+  display: block;
+}
+.btn.dropdown-toggle,
+.nuestra-historia {
+  position: relative; /* Permite que el ::after se posicione sobre él */
+  display: inline-block; /* Limita el ancho al texto, no a toda la fila */
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+}
+
+.dropdown-toggle::before,
+.nuestra-historia::after {
+  content: ""; /* Genera un pseudo-elemento vacío */
+  position: absolute; /* Lo posicionamos respecto al Link */
+  bottom: 0;
+  left: 0; /* Pegado abajo del Link */
+  height: 2px;
+  width: 100%; /* Línea del ancho del Link*/
+  background: orange; /* Color o gradiente decorativo */
+  transform: scaleX(0); /* Inicialmente invisible (aplastada) */
+  transform-origin: left; /* Se expande desde la izquierda */
+  transition: transform 0.3s ease; /* Animación suave */
+}
+
+.dropdown-toggle:hover::before,
+.nuestra-historia:hover::after {
+  transform: scaleX(1); /* Cuando hay hover en la sección: despliega línea */
+  background: linear-gradient(
+    to right,
+    #f78ca0,
+    #fbc7a4
+  ); /*genera un fondo en transición suave entre colores (degradado).*/
+}
+.barra-links {
+  color: white;
+  margin-top: 10%;
+  z-index: 1001;
+  width: fit-content; /*ajusta el ancho del elemento al tamaño del contenido*/
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espacio automático entre elementos */
+  position: fixed; /*Se pega al viewport despues de un punto especifico(top:0)*/
+  bottom: 75%;
+  left: 81%;
+  transform: translate(20px, -68px);
+  z-index: 1001;
+  background-color: rgb(30, 30, 30, 0.6);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.5);
+  padding: 8px 16px;
+  border-top: none;
+ 
+}
+
+.barra-links.scrolled .nuestra-historia,
+.barra-links.scrolled .dropdown-toggle {
+  color: white;
+}

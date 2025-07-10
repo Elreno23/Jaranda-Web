@@ -1,0 +1,87 @@
+.nuestraHistoria {
+  margin: 10% 0 5% 0;
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+}
+.nuestra-historia-img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: 3px solid purple;
+  margin: 320px 0 12px 0;
+}
+
+.nuestra-historia-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.nuestra-historia-info {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: 3px solid blue;
+  margin: 12px 0 12px 0;
+}
+.nuestra-historia-info h2{
+  margin: 35px 0 35px 0;
+}
+.nuestra-historia-info h4{
+  color:rgb(209, 120, 28);
+}
+.nuestra-historia-info p{
+  margin-top: 35px;
+  line-height: 2rem;
+}
+.nuestra-historia-info span{
+  color:rgb(209, 120, 28) ;
+}
+.nuestra-historia-info hr{
+
+  border: 1px solid rgb(209, 120, 28);
+}
+.col-6 {
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+}
+.row {
+  border: 2px solid orange;
+  margin-bottom: 20px;
+}
+.ventana-scroll {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../img/Copilot_20250629_080647.png"); /* ✅ Imagen ubicada en /public/img */
+  background-size: cover;
+  background-position:  center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 5px solid blue;
+box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.4);
+
+}
+.ventana-scroll::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.reveal-scroll {
+  position: absolute;
+  z-index: 2;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
