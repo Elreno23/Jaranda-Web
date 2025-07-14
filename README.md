@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 🍰 Jaranda - Sitio Web para Pastelería Artesanal en Madrid
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositorio contiene el sitio web oficial de **Jaranda**, una pastelería artesanal ubicada en Madrid con dos sedes físicas, enfocada en la elaboración de dulces con ingredientes naturales y presentaciones cuidadas.
 
-## Available Scripts
+El sitio busca ofrecer una experiencia visual atractiva, facilitar el contacto con clientes y mostrar el catálogo de productos más destacados.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🧱 Secciones actuales del sitio
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🏠 **Inicio** – Presentación visual con identidad de marca
+- 👩‍🍳 **Sobre nosotros** – Historia y valores detrás de Jaranda
+- 🍪 **Catálogo** – Productos artesanales disponibles
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚧 Mejoras en desarrollo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Actualmente trabajando en:
 
-### `npm run build`
+- 🖼️ Rediseño de sección *hero* para destacar mejor la identidad visual  
+- 🔗 Optimización de enlaces internos y externos  
+- 🧭 Eliminación del navbar para simplificar navegación  
+- 📲 Integración con **API de WhatsApp** para pedidos directos  
+- 🔌 Potencial conexión a backend para gestión de productos y formularios  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧑‍🍳 Cliente real
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🧁 Este sitio fue desarrollado para el negocio real **Jaranda Pastelería**, ubicado en Madrid.
 
-### `npm run eject`
+### 🗺️ Ubicaciones:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **📍 Calle Pedrosa del Príncipe, 1 – 28051 Madrid**  
+- **📍 Calle de Talamanca del Jarama, 26 – 28051 Madrid**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📸 Redes sociales:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[@pasteleriajaranda](https://www.instagram.com/pasteleriajaranda)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🔧 Tecnologías utilizadas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `React.js` – Frontend principal  
+- `HTML + CSS` – Maquetado y estilos personalizados  
+- `Git + GitHub` – Control de versiones  
+- `GitHub Codespaces` – Desarrollo cloud
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🚀 Instalación local
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+npm run dev
+````
+---
 
-### Analyzing the Bundle Size
+##🗂️ Estructura del proyecto
+Jaranda-Web/
+├── public/
+│   └── index.html
+├── src/
+│   ├── front/
+│   └── styles/
+├── README.md
+├── package.json
+└── ...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+🙌 Créditos
+Diseñado y desarrollado por @Elreno23 como parte de un encargo profesional para un cliente real.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto refleja la esencia artesanal de Jaranda y busca facilitar el acceso a sus productos y ubicaciones mediante una interfaz web visual, simple y efectiva.
