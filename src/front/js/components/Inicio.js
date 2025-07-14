@@ -37,7 +37,7 @@ const Inicio = () => {
   useEffect(() => {
     let rafId;
     const max = 1.8;
-    const min = 0.5;
+    const min = 1;
     const velocidad = 0.0002;
 
     const animarZoom = () => {
@@ -77,7 +77,6 @@ const Inicio = () => {
       role="img"
       aria-label="Imagen de la pastelería Jaranda"
     >
-      <div className="border-interior"></div>
       <div className="contenido-hero-jaranda">
         <h1> {slides[actual].titulo} </h1>
         <Link to={slides[actual].link} className="btn-jaranda">

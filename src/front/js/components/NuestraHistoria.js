@@ -39,7 +39,7 @@ const NuestraHistoria = () => {
           <div className="ventana-scroll">
             <div className="reveal-scroll">
               <h2>PRODUCTOS 100% ARTESANOS</h2>
-              <Link to={"/productos"}>Descubrelos</Link>
+              <Link to={"/productos/#pasteleria"}>Descubrelos</Link>
             </div>
           </div>
         </div>

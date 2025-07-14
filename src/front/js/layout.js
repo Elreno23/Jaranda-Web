@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 import Productos from "./components/Productos";
 import NuestraHistoria from "./components/NuestraHistoria";
 import Inicio from "./components/Inicio";
-import BarraLinks from "./components/BarraLinks";
 
 //create your first component
 const Layout = () => {
@@ -25,7 +24,7 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <Navbar />
-            <BarraLinks/>
+
             <Inicio/>
           <Routes>
             <Route element={<Productos />} path="/productos" />

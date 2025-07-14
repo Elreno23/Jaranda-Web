@@ -1,9 +1,7 @@
 .dropdown-toggle:focus {
   border: none;
 }
-.btn-group {
-  position: relative;
-}
+
 .btn-group .dropdown-menu {
   position: absolute;
   top: 105%; /* Justo debajo del botón */
@@ -55,27 +53,10 @@
   ); /*genera un fondo en transición suave entre colores (degradado).*/
 }
 .barra-links {
-  color: white;
-  margin-top: 10%;
-  z-index: 1001;
+  color: black;
   width: fit-content; /*ajusta el ancho del elemento al tamaño del contenido*/
   display: flex;
-  align-items: center;
   gap: 1rem; /* Espacio automático entre elementos */
-  position: fixed; /*Se pega al viewport despues de un punto especifico(top:0)*/
-  bottom: 75%;
-  left: 81%;
-  transform: translate(20px, -68px);
-  z-index: 1001;
-  background-color: rgb(30, 30, 30, 0.6);
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.5);
   padding: 8px 16px;
-  border-top: none;
- 
 }
 
-.barra-links.scrolled .nuestra-historia,
-.barra-links.scrolled .dropdown-toggle {
-  color: white;
-}

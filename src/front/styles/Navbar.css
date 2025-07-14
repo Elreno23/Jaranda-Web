@@ -1,24 +1,27 @@
 nav {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #1e1e1e;
-  position: sticky;
+  justify-content: center;
+  background-color: transparent;
+  position: fixed;
   top: 0;
-  left: 0;
-  z-index: 1000;
-  padding-bottom: 60px;
   text-align: center;
-  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.5);
+  z-index: 100;
   flex-wrap: wrap; /* Ayuda en móvil */
   padding: 20px 20px 15px 20px;
   
+}
+.nav.scrolled{
+  background-color: orange;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .order {
   height: 45px;
   padding: 15px;
-    display: flex;
+  position: absolute;
+  right: 10%;
   align-items: center;
   gap: 5px;
   background-color: #1e1e1e;
@@ -58,44 +61,6 @@ color: #F5ECDC;
 }
 
 
-
-.ubicaciones-jaranda {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  font-size: 1rem;
-  margin: 20px 0;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.link-mapa {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #D1781C;
-  transition: color 0.3s ease;
-  font-weight: 500;
-  
-}
-.link-mapa p{
-  margin: 0 0 0 10px;
-}
-.link-mapa i {
-  color: #F5ECDC;
-}
-
-.link-mapa:hover {
-  color: #F5ECDC;
-}
-
-.separador {
-  font-weight: bold;
-  color: #F5ECDC;
-  align-self: center;
-}
-
-
 .logo {
   display: flex;
   align-items: center;
@@ -108,7 +73,6 @@ color: #F5ECDC;
   transition: transform 0.4s ease, color 0.4s ease, border 0.4s ease,
     font-size 0.4s ease;
   box-shadow: 0 0 10px rgba(255, 218, 183, 0.2);
-
   font-family: "Playfair Display", serif; /* Más personalidad */
   padding: 6px 12px;
   border-radius: 8px;
@@ -131,4 +95,10 @@ color: #F5ECDC;
 .logo:hover span {
   transform: rotate(0deg) scale(1.12);
   color: rgb(209, 120, 28);
+}
+.logo-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
