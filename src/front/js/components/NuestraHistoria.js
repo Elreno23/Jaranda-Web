@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const NuestraHistoria = () => {
   return (
     <>
+    
       <div className="container-fluid nuestraHistoria">
         <div className="row">
           <div className="col-6">

@@ -3,20 +3,41 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
-  position: fixed;
-  top: 0;
+  position: relative;
   text-align: center;
+  background-color: transparent;
   z-index: 100;
   flex-wrap: wrap; /* Ayuda en móvil */
   padding: 20px 20px 15px 20px;
-  
+  transition: box-shadow 0.4s ease;
 }
-.nav.scrolled{
-  background-color: orange;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.main-nav.restored {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
+.ghost-nav {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease, opacity 0.8s ease;
+  background-color: transparent;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: none;
+  pointer-events: none; /* evita que interfiera mientras está invisible */
+  padding: 20px 20px 15px 20px;
+}
+.ghost-nav.scrolled {
+  opacity: 1;
+  background-color: orange;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+}
 .order {
   height: 45px;
   padding: 15px;
@@ -25,18 +46,17 @@ nav {
   align-items: center;
   gap: 5px;
   background-color: #1e1e1e;
-  display: flex;;
-  color: #F5ECDC;
- border: 5px double rgba(255, 255, 255, 0.4);
+  display: flex;
+  color: #f5ecdc;
+  border: 5px double rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 10px rgba(255, 218, 183, 0.2);
-
 }
 .order:hover {
   transform: scale(1.05);
- border: 5px double rgb(209, 120, 28);
-  border-color: #F5ECDC;
+  border: 5px double rgb(209, 120, 28);
+  border-color: #f5ecdc;
   box-shadow: 0 0 15px rgb(245, 236, 220, 0.6);
 }
 
@@ -44,22 +64,19 @@ nav {
   transform: scale(1.5) rotate(360deg);
   color: rgb(209, 120, 28);
 }
-.order:hover p{
-color: #F5ECDC;
+.order:hover p {
+  color: #f5ecdc;
 }
 
 .order p {
   margin: 0 5px 0 0;
   font-size: 1rem;
   font-weight: 500;
-  
 }
 .order i {
   font-size: 1.2rem;
   transition: transform 0.8s ease;
-  
 }
-
 
 .logo {
   display: flex;
@@ -79,7 +96,7 @@ color: #F5ECDC;
 }
 
 .logo span {
-  color: #F5ECDC;
+  color: #f5ecdc;
   transform: rotate(-3deg);
   font-size: 2.5rem;
   font-weight: bold;
@@ -88,7 +105,7 @@ color: #F5ECDC;
 
 .logo:hover {
   transform: scale(1.05);
-  border-color: #F5ECDC;
+  border-color: #f5ecdc;
   box-shadow: 0 0 15px rgb(245, 236, 220, 0.6);
 }
 
@@ -96,7 +113,7 @@ color: #F5ECDC;
   transform: rotate(0deg) scale(1.12);
   color: rgb(209, 120, 28);
 }
-.logo-links{
+.logo-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
