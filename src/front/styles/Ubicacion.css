@@ -1,0 +1,76 @@
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.jaranda-congosto,
+.jaranda-ensanche {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: end;
+
+    width: 90%;
+    height: 300px;
+    margin-bottom: 5%;
+
+}
+
+.jaranda-congosto::before, .jaranda-ensanche::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-image: url("../img/Copilot_20250629_075220.png");
+    background-size: cover;
+    z-index: -1;/* detrás del contenido */
+    filter: blur(1.5px);
+}
+
+.jaranda-congosto a,
+.jaranda-ensanche a {
+    background-color: black;
+    position: relative;
+    display: inline-block;
+    color: orange;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px;
+    overflow: hidden;
+    z-index: 0;
+    transition: transform 0.5s ease;
+
+}
+
+.jaranda-congosto a::before,
+.jaranda-ensanche a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(to right, #f78ca0, #fbc7a4);/*Cuando hay hover en la sección: despliega línea */
+    transition: transform 0.5s ease;/*genera un fondo en transición suave entre colores (degradado).*/
+    z-index: -1;
+}
+
+.jaranda-congosto a:hover::before,
+.jaranda-ensanche a:hover::before {
+    transform: scaleX(1);
+}
+
+.jaranda-congosto a:not(:hover)::before,
+.jaranda-ensanche a:not(:hover)::before {
+  transform-origin: right;
+}

@@ -31,7 +31,7 @@ const Productos = () => {
     }
   }, [location]); // 🔁 Se vuelve a ejecutar si cambia la URL (por ejemplo, al hacer clic en otro link con hash)
   return (
-    <>
+    
    
       <div className="productos">
         {Object.entries(categorias).map(([nombre, items]) => (
@@ -57,7 +57,7 @@ const Productos = () => {
           </section>
         ))}
       </div>
-    </>
+    
   );
 };
 

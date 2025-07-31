@@ -51,9 +51,19 @@ const BarraLinks = () => {
                 ))}
               </ul>
             </div>
-            {location.pathname !== "/Hola" && (
+            {location.pathname !== "/Nuestra-Historia" && (
               <Link className="nuestra-historia" to="/Nuestra-Historia">
                 Nuestra Historia
+              </Link>
+            )}
+             {location.pathname !== "/Ubicacion" && (
+              <Link className="ubicacion" to="/Ubicacion">
+                Ubicación
+              </Link>
+            )}
+             {location.pathname !== "/Galeria" && (
+              <Link className="galeria" to="/Galeria">
+                Galeria
               </Link>
             )}
           </div>

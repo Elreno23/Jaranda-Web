@@ -21,16 +21,17 @@
   display: block;
 }
 .btn.dropdown-toggle,
-.nuestra-historia {
+.nuestra-historia, .ubicacion, .galeria {
   position: relative; /* Permite que el ::after se posicione sobre él */
   display: inline-block; /* Limita el ancho al texto, no a toda la fila */
   text-decoration: none;
   color: inherit;
   padding: 0;
+  margin: 0;
 }
 
 .dropdown-toggle::before,
-.nuestra-historia::after {
+.nuestra-historia::after, .ubicacion::after, .galeria::after {
   content: ""; /* Genera un pseudo-elemento vacío */
   position: absolute; /* Lo posicionamos respecto al Link */
   bottom: 0;
@@ -44,7 +45,7 @@
 }
 
 .dropdown-toggle:hover::before,
-.nuestra-historia:hover::after {
+.nuestra-historia:hover::after, .ubicacion:hover::after, .galeria:hover::after {
   transform: scaleX(1); /* Cuando hay hover en la sección: despliega línea */
   background: linear-gradient(
     to right,
@@ -53,6 +54,7 @@
   ); /*genera un fondo en transición suave entre colores (degradado).*/
 }
 .barra-links {
+  align-items: center;
   color: black;
   width: fit-content; /*ajusta el ancho del elemento al tamaño del contenido*/
   display: flex;
