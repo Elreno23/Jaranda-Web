@@ -10,6 +10,7 @@ import NuestraHistoria from "./components/NuestraHistoria";
 import Ubicacion from "./components/Ubicacion";
 import App from "./pages/App";
 import Galeria from "./components/Galeria";
+import Navbar from "./components/Navbar";
 
 //create your first component
 const Layout = () => {
@@ -24,7 +25,7 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <ScrollToTop>
       
-           
+           <Navbar/>
           <Routes>
             <Route element={<App />}>
             <Route path="/" element={<></>} />

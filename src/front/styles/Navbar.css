@@ -15,101 +15,14 @@ nav {
   transition: box-shadow 0.4s ease;
 }
 
-nav a {
-  text-decoration: none;
-}
-
-
-.ghost-nav {
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.main-nav.restored {
+  position: absolute;
   background-color: transparent;
   box-shadow: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: none;
-  pointer-events: none;
-  /* evita que interfiera mientras está invisible */
-  padding: 20px 20px 15px 20px;
 }
 
-.ghost-nav.scrolled {
-  opacity: 1;
+.main-nav.scrolled {
+  position: fixed;
   background-color: orange;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  pointer-events: auto;
-
-}
-
-.order,
-.insta {
-  color: black;
-  position: absolute;
-  font-size: 25px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.order {
-  right: 10%;
-  top: 55%;
-}
-
-.insta {
-  right: 15%;
-  top: 55%;
-}
-
-.order:hover i,
-.insta:hover i {
-  transform: scale(1.5);
-  color: rgb(209, 120, 28);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 2.2rem;
-  text-decoration: none;
-  color: #fff;
-  height: 50px;
-  padding: 6px 12px;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  transition: transform 0.4s ease, color 0.4s ease, border 0.4s ease,
-    font-size 0.4s ease;
-  box-shadow: 0 0 10px rgba(255, 218, 183, 0.2);
-  font-family: "Playfair Display", serif;
-  /* Más personalidad */
-  padding: 6px 12px;
-  border-radius: 8px;
-}
-
-.logo span {
-  color: #f5ecdc;
-  transform: rotate(-3deg);
-  font-size: 2.5rem;
-  font-weight: bold;
-  transition: transform 0.5s ease, color 0.4s ease;
-}
-
-.logo:hover {
-  transform: scale(1.05);
-  border-color: #f5ecdc;
-  box-shadow: 0 0 15px rgb(245, 236, 220, 0.6);
-}
-
-.logo:hover span {
-  transform: rotate(0deg) scale(1.12);
-  color: rgb(209, 120, 28);
-}
-
-.logo-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }

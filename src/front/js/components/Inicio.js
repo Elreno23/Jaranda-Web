@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
 
 import img1 from "../../img/Copilot_20250629_075220.png";
 import img2 from "../../img/Copilot_20250629_075620.png";
@@ -33,13 +32,12 @@ const Inicio = () => {
   const zoomRef = useRef(null);
   const scaleRef = useRef(0.5);
   const [actual, setActual] = useState(0);
-  const [anterior, setAnterior] = useState(null);
 
   useEffect(() => {
     let rafId;
     const max = 1.8;
     const min = 1;
-    const velocidad = 0.0002;
+    const velocidad = 0.0001;
     //La imagen arranca ya con escala 1
     scaleRef.current = min;
     retrocediendoRef.current = false;
@@ -68,12 +66,11 @@ const Inicio = () => {
 
   useEffect(() => {
     const intervalo = setInterval(() => {
-      setAnterior(actual); // guardamos la imagen anterior
       setActual((prev) => (prev + 1) % slides.length); // pasamos a la siguiente
     }, 9000);
 
     return () => clearInterval(intervalo); // limpieza al desmontar
-  }, [actual, slides.length]);
+  }, []);
 
   return (
     <div
@@ -81,28 +78,15 @@ const Inicio = () => {
       role="img"
       aria-label="Imagen de la pastelería Jaranda"
     >
-      <Navbar />
+      
       <div className="contenido-hero-jaranda">
         <h1> {slides[actual].titulo} </h1>
-        
-        <p>Alguna pequeña descripcion dinamica</p>
-       
         <Link to={slides[actual].link} className="btn-jaranda">
           {slides[actual].textoBoton}
         </Link>
       </div>
       <div className="inicio-img-wrapper" ref={zoomRef}>
-        {anterior !== null && (
-          <img
-            className="fade-out"
-            key={`prev-${anterior}`}
-            src={slides[anterior].img}
-            alt="Imagen Jaranda"
-          />
-        )}
         <img
-          className="fade-in"
-          key={`actual-${actual}`}
           src={slides[actual].img}
           alt="Imagen Jaranda"
         />

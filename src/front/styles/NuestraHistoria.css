@@ -47,10 +47,7 @@
   display: flex;
   align-items: center;
 }
-.row {
-  border: 2px solid orange;
-  margin-bottom: 20px;
-}
+
 .ventana-scroll {
   height: 450px;
   position: relative;

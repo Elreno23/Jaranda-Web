@@ -36,7 +36,7 @@ const NuestraHistoria = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row mt-2">
           <div className="ventana-scroll">
             <div className="reveal-scroll">
               <h2>PRODUCTOS 100% ARTESANOS</h2>
