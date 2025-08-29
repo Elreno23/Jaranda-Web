@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-
+import Navbar from "../components/Navbar"
 import img1 from "../../img/Copilot_20250629_075220.png";
 import img2 from "../../img/Copilot_20250629_075620.png";
 import img3 from "../../img/Copilot_20250629_075950.png";
@@ -18,7 +18,7 @@ const Inicio = () => {
     {
       img: img2,
       titulo: "Conoce nuestra Historia",
-      link: "/Nuestra-Historia",
+      link: "/nuestra-historia",
       textoBoton: "descubrenos",
     },
     {
@@ -32,7 +32,7 @@ const Inicio = () => {
   const zoomRef = useRef(null);
   const scaleRef = useRef(0.5);
   const [actual, setActual] = useState(0);
-
+  const item = slides[actual];
   useEffect(() => {
     let rafId;
     const max = 1.8;
@@ -74,20 +74,20 @@ const Inicio = () => {
 
   return (
     <div
-      className="container-fluid inicio"
+      className="container-fluid banner"
       role="img"
       aria-label="Imagen de la pastelería Jaranda"
     >
-      
-      <div className="contenido-hero-jaranda">
-        <h1> {slides[actual].titulo} </h1>
-        <Link to={slides[actual].link} className="btn-jaranda">
-          {slides[actual].textoBoton}
+      <Navbar/>
+      <div className="banner-content">
+        <h1> {item.titulo} </h1>
+        <Link to={item.link} className="btn-jaranda">
+          {item.textoBoton}
         </Link>
       </div>
-      <div className="inicio-img-wrapper" ref={zoomRef}>
-        <img
-          src={slides[actual].img}
+      <div className="banner-img" >
+        <img ref={zoomRef}
+          src={item.img}
           alt="Imagen Jaranda"
         />
       </div>

@@ -1,28 +1,58 @@
-nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
+nav.navbar{
+  z-index: 2;
   background-color: transparent;
-  z-index: 100;
-  flex-wrap: wrap;
-  /* Ayuda en móvil */
-  padding: 20px 20px 15px 20px;
   transition: box-shadow 0.4s ease;
 }
-
-.main-nav.restored {
-  position: absolute;
-  background-color: transparent;
-  box-shadow: none;
+.container-fluid.nav{
+  padding: 50px;
+}
+a.navbar-brand{
+  margin: 0;
 }
 
-.main-nav.scrolled {
+.navbar.scrolled {
+  left: 0;
+  width: 100%;
   position: fixed;
   background-color: orange;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  }
+  
+
+
+
+.nav-link {
+  position: relative; /* Permite que el ::after se posicione sobre él */
+  display: inline-block; /* Limita el ancho al texto, no a toda la fila */
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+.nav-link::before {
+  content: ""; /* Genera un pseudo-elemento vacío */
+  position: absolute; /* Lo posicionamos respecto al Link*/ 
+  bottom: 0;
+  left: 0; /* Pegado abajo del Link */
+  height: 2px;
+  width: 100%; /* Línea del ancho del Link*/
+  background: orange; /* Color o gradiente decorativo */
+  transform: scaleX(0); /* Inicialmente invisible (aplastada)*/ 
+  transform-origin: left; /* Se expande desde la izquierda */
+  transition: all 0.3s ease-in-out; /* Animación suave */
+z-index: 1;
+}
+
+
+.nav-link:hover::before {
+  transform: scaleX(1); /* Cuando hay hover en la sección: despliega línea */
+  background: linear-gradient(
+    to right,
+    #f78ca0,
+    #fbc7a4
+  ); /*genera un fondo en transición suave entre colores (degradado).*/
+}
 }
