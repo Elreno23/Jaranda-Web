@@ -1,13 +1,27 @@
-import React from "react";
+import React,{useLayoutEffect} from "react";
+import { useLocation } from "react-router-dom";
 import img1 from "../../img/Copilot_20250629_080155.png";
 import "../../styles/NuestraHistoria.css";
 import { Link } from "react-router-dom";
 
 const NuestraHistoria = () => {
+  const location = useLocation();
+    useLayoutEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        // Esperamos un poco más para asegurar que todo esté montado
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 300);
+      };
+    };
+  }, [location]);
   return (
-    <>
+    <section>
     
-      <div className="container-fluid nuestraHistoria">
+      <div className="container-fluid nuestraHistoria" id="nuestra-historia">
         <div className="row">
           <div className="col-6">
             <div className="nuestra-historia-info">
@@ -45,7 +59,7 @@ const NuestraHistoria = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 export default NuestraHistoria;

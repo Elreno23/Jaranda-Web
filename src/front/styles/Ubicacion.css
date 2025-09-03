@@ -1,25 +1,26 @@
-.ubicacion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%;
+.direccion h1,p{
+     margin: 0;
 }
-
-.jaranda-congosto,
-.jaranda-ensanche {
+.direccion{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50px);
+    text-align: center;
+}
+.row.tiendas{
+    margin-top: 5%;
+    padding: 50px;
+}
+.congosto,
+.ensanche {
     position: relative;
-    z-index: 0;
-    display: flex;
-    align-items: end;
-
-    width: 90%;
     height: 300px;
     margin-bottom: 5%;
 
 }
 
-.jaranda-congosto::before, .jaranda-ensanche::before {
+.congosto::before, .ensanche::before {
     content: "";
     position: absolute;
     top: 0;
@@ -33,25 +34,25 @@
     filter: blur(1.5px);
 }
 
-.jaranda-congosto a,
-.jaranda-ensanche a {
+.congosto a,
+.ensanche a {
     background-color: black;
     position: relative;
     display: inline-block;
     color: orange;
-    margin-left: 5%;
-    margin-bottom: 5%;
+    left: 10%;
+    top: 65%;
     text-decoration: none;
     border: 1px solid black;
     padding: 5px;
     overflow: hidden;
     z-index: 0;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
 
 }
 
-.jaranda-congosto a::before,
-.jaranda-ensanche a::before {
+.congosto a::before,
+.ensanche a::before {
     content: "";
     position: absolute;
     top: 0;
@@ -61,16 +62,16 @@
     transform: scaleX(0);
     transform-origin: left;
     background: linear-gradient(to right, #f78ca0, #fbc7a4);/*Cuando hay hover en la sección: despliega línea */
-    transition: transform 0.5s ease;/*genera un fondo en transición suave entre colores (degradado).*/
+    transition: transform 0.5s ease-in-out;/*genera un fondo en transición suave entre colores (degradado).*/
     z-index: -1;
 }
 
-.jaranda-congosto a:hover::before,
-.jaranda-ensanche a:hover::before {
+.congosto a:hover::before,
+.ensanche a:hover::before {
     transform: scaleX(1);
 }
 
-.jaranda-congosto a:not(:hover)::before,
-.jaranda-ensanche a:not(:hover)::before {
+.congosto a:not(:hover)::before,
+.ensanche a:not(:hover)::before {
   transform-origin: right;
 }

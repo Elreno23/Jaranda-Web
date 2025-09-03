@@ -10,12 +10,12 @@ import prueba6 from "../../img/Copilot_20250629_080647.png";
 
 const Productos = () => {
   const categorias = {
-    pasteleria: { texto: "Tarta de frutas", imagen: prueba1 },
-    bolleria: { texto: "Croissant", imagen: prueba2 },
-    panaderia: { texto: "Pan integral", imagen: prueba3 },
-    salados: { texto: "Empanada", imagen: prueba4 },
-    surtidos: { texto: "Surtido de galletas", imagen: prueba5 },
-    temporada: { texto: "Roscón de Reyes", imagen: prueba6 }
+    Pasteleria: { titulo: "Tarta de frutas", imagen: prueba1 },
+    Bolleria: { titulo: "Croissant", imagen: prueba2 },
+    Panaderia: { titulo: "Pan integral", imagen: prueba3 },
+    Salados: { titulo: "Empanada", imagen: prueba4 },
+    Surtidos: { titulo: "Surtido de galletas", imagen: prueba5 },
+    Temporada: { titulo: "Roscón de Reyes", imagen: prueba6 }
   };
   const location = useLocation(); // 👈 Obtenemos la ruta actual, incluyendo el hash (#)
 
@@ -31,33 +31,33 @@ const Productos = () => {
     }
   }, [location]); // 🔁 Se vuelve a ejecutar si cambia la URL (por ejemplo, al hacer clic en otro link con hash)
   return (
-    
-   
-      <div className="productos">
+
+    <section className="categoria" >
+      <div className="container-fluid productos">
         {Object.entries(categorias).map(([nombre, items]) => (
-          <section key={nombre} id={nombre} className="categoria">
+          <div className="card text-center" key={nombre} id={nombre}>
             <h2>{nombre}</h2>
-                  <div className="card text-center">
-                    <div className="card-img-wrapper">
-                      <img
-                        src={items.imagen}
-                        className="card-img-top"
-                        alt={items.texto}
-                      />
-                    </div>
-                    <div className="card-img-overlay">
-                      <h5 className="card-title">{items.texto} </h5>
-                      <p className="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                    </div>
-                  </div>
-          </section>
+            <div className="card-img-wrapper">
+              <img
+                src={items.imagen}
+                className="card-img-top"
+                alt="dffd"
+              />
+            </div>
+            <div className="card-img-overlay">
+              <h5 className="card-title">{items.titulo} </h5>
+              <p className="card-text">
+                This is a wider card with supporting text below as a
+                natural lead-in to additional content. This content is a
+                little bit longer.
+              </p>
+            </div>
+          </div>
         ))}
       </div>
-    
+    </section>
+
+
   );
 };
 

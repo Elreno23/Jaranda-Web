@@ -3,13 +3,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/scrollToTop";
 
 import injectContext from "./store/appContext";
-
-import Footer from "./components/Footer";
 import Productos from "./components/Productos";
 import NuestraHistoria from "./components/NuestraHistoria";
 import Ubicacion from "./components/Ubicacion";
 import App from "./pages/App";
 import Galeria from "./components/Galeria";
+import Footer from "./components/Footer";
 
 //create your first component
 const Layout = () => {
@@ -20,11 +19,9 @@ const Layout = () => {
   //if (!process.env.BACKEND_URL || process.env.BACKEND_URL === "") return (<p>Tienes que configurar BACKEND_URL en .env</p>);
 
   return (
-    <div>
+    <>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
-      
-           
           <Routes>
             <Route element={<App />}>
             <Route path="/" element={<></>} />
@@ -34,10 +31,10 @@ const Layout = () => {
             <Route element={<Galeria/>} path="/Galeria"/>
           </Route>
           </Routes>
-          <Footer />
+          <Footer/>
         </ScrollToTop>
       </BrowserRouter>
-    </div>
+    </>
   );
 };
 

@@ -1,12 +1,16 @@
 nav.navbar{
   z-index: 2;
   background-color: transparent;
-  transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.8s ease;
+  position: relative;
+  
 }
 .container-fluid.nav{
-  padding: 50px;
+  padding: 0 40px;
 }
 a.navbar-brand{
+  font-family: sans-serif;
+  font-size: 30px;
   margin: 0;
 }
 
@@ -14,24 +18,36 @@ a.navbar-brand{
   left: 0;
   width: 100%;
   position: fixed;
-  background-color: orange;
+  background-color: #E67E22;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  z-index: 2;
-  }
-  
+  z-index: 1000;
+}
+.navbar.scrolled span{
+  color: white;
+}
+.collapse.navbar-collapse{
+  justify-content: center;
+}  
 
+i{
+  margin: 10px 15px;
+  font-size: 30px;
+  color: black;
+}
 
 
 .nav-link {
   position: relative; /* Permite que el ::after se posicione sobre él */
   display: inline-block; /* Limita el ancho al texto, no a toda la fila */
   text-decoration: none;
-  color: inherit;
+  color: black!important;
   padding: 0;
   margin: 0;
 }
 
+
 @media (min-width: 768px) {
+ 
 .nav-link::before {
   content: ""; /* Genera un pseudo-elemento vacío */
   position: absolute; /* Lo posicionamos respecto al Link*/ 
@@ -42,7 +58,7 @@ a.navbar-brand{
   background: orange; /* Color o gradiente decorativo */
   transform: scaleX(0); /* Inicialmente invisible (aplastada)*/ 
   transform-origin: left; /* Se expande desde la izquierda */
-  transition: all 0.3s ease-in-out; /* Animación suave */
+  transition: all 0.3s ease; /* Animación suave */
 z-index: 1;
 }
 
@@ -55,4 +71,20 @@ z-index: 1;
     #fbc7a4
   ); /*genera un fondo en transición suave entre colores (degradado).*/
 }
+}
+.navbar-nav .nav-item.dropdown .dropdown-menu{
+  border-radius: 0px;
+  margin-top: 20px;
+  margin-left: 35px;
+  padding: 20px;
+}
+.navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item{
+  padding: 5px;
+}
+.navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover{
+  background-color: white;
+  color: #E67E22;
+}
+.navbar-brand span{
+  color: #E67E22;
 }

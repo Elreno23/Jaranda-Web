@@ -10,6 +10,7 @@ export const App = () => {
       
       <Inicio /> {/*  Sección visible en todas las páginas */}
       <Outlet /> {/* Aquí se renderiza el contenido de cada ruta */}
+   
     </>
   );
 };
